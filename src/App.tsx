@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import { Menu } from 'antd';
+import Content from './components/Content';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{display:'flex', flexDirection:'row'}}>
+      <Menu style={{width:'25vw'}}>
+        <Menu.Item key='1'>
+          Home
+        </Menu.Item>
+        <Menu.Item key='2'>
+          Dashboard
+        </Menu.Item>
+        <Menu.Item key='3'>
+          Users List
+        </Menu.Item>
+        <Menu.Item key='4'>
+          Profile
+        </Menu.Item>
+        <Menu.Item key='5'>
+          Sign Out
+        </Menu.Item>
+      </Menu>
+      <Content/>
     </div>
   );
 }
